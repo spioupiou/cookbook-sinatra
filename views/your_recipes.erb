@@ -1,0 +1,23 @@
+<div class="container-fluid title-container">
+  <h2> Your Recipes</h2>
+</div>
+<div class="container-fluid cards">
+  <div class="row">
+
+    <% @recipes.each do |recipe| %>
+
+      <div class="col-xs-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src=<%=recipe.img_url%> height=300 style="object-fit:cover" alt="recipe">
+          <div class="card-body">
+            <h5 class="card-title"><%= recipe.name %></h5>
+            <p class="card-text"><%= recipe.description %></p>
+            <p class="rating"><i class="fas fa-star"></i> <%= recipe.rating %>/5</p>
+            <a href="/destroy/<%= recipe.id %>" class="btn-delete"><i class="fas fa-trash-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>

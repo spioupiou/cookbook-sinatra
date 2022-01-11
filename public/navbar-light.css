@@ -1,0 +1,96 @@
+.navbar-light {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 2px 7px 1px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.navbar-light a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 20px;
+}
+
+.navbar-light-section {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-light-logo {
+  height: 64px;
+  width: 64;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin: 0 24px;
+}
+
+.navbar-light-brand {
+  margin: 0;
+  color: #373737;
+}
+
+.navbar-light-btn a {
+  margin: 0 24px;
+  background-color: #ef476f;
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 16px;
+  color: #f9f9f9;
+}
+
+.navbar-light-hb {
+  margin: 0 24px;
+  z-index: 10;
+}
+
+.navbar-light-hb img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.pink {
+  color: #ef476f;
+  font-weight: bold;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  z-index: 10;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  position: absolute;
+  height: 100vh;
+  background-color: rgb(55,55,55);
+  top: 0;
+  left: 0;
+  width: auto;
+  padding: 32px;
+  opacity: 0;
+}
+
+.panel > a {
+  white-space: nowrap;
+  margin-bottom: 8px;
+}
+
+.panel.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 576px) {
+  .navbar-light-brand {
+    font-size: 24px;
+    display: none;
+  }
+}

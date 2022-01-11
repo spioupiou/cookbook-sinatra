@@ -1,0 +1,93 @@
+.navbar-vanilla {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-vanilla a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 20px;
+}
+
+.navbar-vanilla-section {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-vanilla-logo {
+  height: 64px;
+  width: 64;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin: 0 24px;
+}
+
+.navbar-vanilla-brand {
+  margin: 0;
+  color: #f9f9f9;
+  text-shadow: 1px 1px 16px rgba(0,0,0,0.2);
+}
+
+.navbar-vanilla-btn a {
+  margin: 0 24px;
+  background-color: #ef476f;
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 16px;
+  color: #f9f9f9;
+}
+
+.navbar-vanilla-hb {
+  position: relative;
+  margin: 0 24px;
+  z-index: 10;
+}
+
+.navbar-vanilla-hb img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.navbar-vanilla-hb ul {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+  width: max-content;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.navbar-vanilla-hb.active ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-vanilla-hb li {
+  margin-bottom: 8px;
+}
+
+.pink {
+  color: #ef476f;
+  font-weight: bold;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  z-index: 10;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 576px) {
+  .navbar-vanilla-brand {
+    font-size: 24px;
+    display: none;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cookbook Sinatra</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <link rel="stylesheet" href="/application.css">
+  </head>
+
+  <body>
+    <div class="navbar-light sticky">
+      <div class="navbar-light-section">
+        <div class="navbar-light-hb">
+          <img src="/img/hamburger-dark.png" class="menu-dark" alt="">
+          <div class="panel">
+            <a href="/">Search a Recipe</a>
+            <a href="new">Create a Recipe</a>
+            <% if @is_logged_in %>
+              <a href="your_recipes">Your recipes</a>
+              <a href="logout">Log out</a>
+            <% else %>
+              <a href="login">Log in</a>
+            <% end %>
+          </div>
+        </div>
+        <h2 class="navbar-light-brand"><span class="pink">My</span> Cookbook</h2>
+      </div>
+
+      <div class="navbar-light-section">
+        <div class="navbar-light-btn">
+          <% if @is_logged_in %>
+            <a href="logout">Log out</a>
+          <% else %>
+            <a href="signup">Sign up</a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+
+    <script src="/light_navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<div class="small-content-container form-container">
+  <h3 class="pb-3 title">Create a recipe</h3>
+  <form action="/create_recipe" method="POST" id="create-form">
+    <div class="form-group">
+      <label for="recipe-name">Name</label>
+      <input type="text" class="form-control" id="recipe-name" name="name" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="recipe-description">Description</label>
+      <textarea class="form-control" id="recipe-description" name="description" rows="5" autocomplete="off"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="rating" class="mr-2">Rating</label>
+      <select name="rating" id="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-block btn-purple mt-3">Create</button>
+  </form>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+@import url("navbar-dark.css");
+@import url("navbar-light.css");
+@import url("homepage.css");
+@import url("card.css");
+@import url("form.css");
+@import url("containers.css");
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 992px) {
+  .content-container {
+    width: 700px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 768px) {
+  .content-container {
+    width: 600px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 576px) {
+  .content-container {
+    width: 300px;
+  }
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #373737;
+  width: 100%;
+}
+
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.background-pic {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("img/background.jpg");
+  background-size: cover;
+}
+
+h3 {
+  color: #f9f9f9;
+  font-size: 20px;
+}

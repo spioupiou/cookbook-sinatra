@@ -1,0 +1,30 @@
+<div class="container-fluid title-container">
+  <h2><%= @title %></h2>
+</div>
+<div class="container-fluid cards">
+  <div class="row">
+
+    <% @web_recipes.each do |recipe| %>
+
+      <div class="col-xs-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src=<%=recipe.img_url%> onerror="this.src='img/background.jpg'" height=300 style="object-fit:cover" alt="recipe">
+          <div class="card-body">
+            <h5 class="card-title"><%= recipe.name %></h5>
+            <p class="card-text"><%= recipe.description %></p>
+            <p class="rating"><i class="fas fa-star"></i> <%= recipe.rating %>/5</p>
+            <form method="post" action="/create_recipe">
+              <input type="hidden" name="name" value='<%= recipe.name %>'>
+              <input type="hidden" name="description" value="<%= recipe.description %>">
+              <input type="hidden" name="rating" value="<%= recipe.rating %>">
+              <input type="hidden" name="img_url" value="<%= recipe.img_url %>">
+              <button type='submit' class="btn-add"><i class="far fa-heart"></i></button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.card-img-top {
+  position: relative;
+}
+
+.btn-add, .btn-delete {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  color: white;
+  filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.6));
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+.btn-add {
+  font-size: 32px;
+}
+
+.btn-delete {
+  font-size: 28px
+}
+
+.fa-star {
+  color: gold;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.rating {
+  font-size: 18px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: white;
+  filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.6));
+}
